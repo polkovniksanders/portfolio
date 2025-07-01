@@ -7,14 +7,14 @@ export default function ProjectsSection() {
     {
       title: 'Medical dashboard',
       description:
-        'Мультипользовательский дашборд для медицинскийх учреждений. SaaS-платформа для управления медициским оборудованием',
+        'Мультипользовательский дашборд для медицинских учреждений. SaaS-платформа для управления медициским оборудованием',
       stack: ['React', 'Redux Toolkit', 'Less', 'PHP', 'Docker'],
     },
 
     {
       title: 'Telegram bot dashboard',
       description:
-        'Мультипользовательский дашборд для медицинскийх учреждений. SaaS-платформа для управления медициским оборудованием',
+        'Мультипользовательский дашборд для управления Telegram-ботом',
       stack: ['React', 'Redux Toolkit', 'Styled Components', 'Apexcharts'],
     },
 
