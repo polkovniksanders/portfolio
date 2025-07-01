@@ -1,6 +1,7 @@
 'use client';
 
 import Section from '@/components/Section';
+import Text from '@/components/Text';
 
 export default function HomeSection() {
   const contact = () => {
@@ -9,7 +10,7 @@ export default function HomeSection() {
 
   return (
     <Section id={'home'}>
-      <div className='relative w-screen h-screen flex items-center justify-center bg-black text-white transition-colors'>
+      <div className='w-screen h-screen flex items-center justify-center bg-black text-white transition-colors'>
         <div className='z-10 flex flex-col items-center text-center gap-6 px-4'>
           <span className='text-sm sm:text-base font-medium tracking-wide uppercase'>
             Привет, я Слава
@@ -18,12 +19,15 @@ export default function HomeSection() {
             Фронтенд-разработчик <br />
             <span className='text-primary'>React & TypeScript</span>
           </h1>
-          <p className='max-w-xl text-base sm:text-lg mt-4'>
+
+          <Text>
             Разрабатываю современные интерфейсы, оптимизирую фронтенд под
             бизнес-задачи, создаю удобный и быстрый пользовательский опыт.
             Специализация — React, Redux, Tailwind, Styled Components,
             современный JavaScript.
-          </p>
+          </Text>
+
+          <p className='max-w-xl text-base sm:text-lg mt-4'></p>
           <div className='flex gap-4 mt-6 flex-wrap justify-center'>
             <a
               href='#projects'
