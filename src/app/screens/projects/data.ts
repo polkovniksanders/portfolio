@@ -55,4 +55,12 @@ export const data: ProjectDataProps[] = [
     stack: ['Next.JS', 'TypeScript', 'Redux Toolkit', 'Tailwind'],
     link: 'https://taskhub-two.vercel.app/dashboard',
   },
+  {
+    id: 7,
+    title: 'Fancy color generator',
+    description:
+      'Генератор 5 разных цветов с возможностью заблокировать и перевыбрать другие.',
+    stack: ['JS', 'CSS', 'VanillaJS'],
+    link: 'https://polkovniksanders.github.io/fancy-color-generator/',
+  },
 ];
