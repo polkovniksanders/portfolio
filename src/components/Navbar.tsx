@@ -19,8 +19,8 @@ export default function Navbar() {
               onClick={() => handleScroll(id)}
               className={
                 active === id
-                  ? 'text-primary font-bold underline underline-offset-4 transition'
-                  : 'text-white/70 hover:text-primary transition'
+                  ? 'text-foreground-secondary font-bold underline underline-offset-4 transition'
+                  : 'text-foreground-secondary/70 hover:text-primary transition'
               }
               style={{ userSelect: 'none' }}
             >

@@ -29,7 +29,9 @@ const FaqSection = dynamic(() => import('@/app/screens/faq/FaqSection'), {
 export default function HomePage() {
   return (
     <>
-      <Navbar />
+      <header>
+        <Navbar />
+      </header>
       <main className='w-screen'>
         <HomeSection />
         <SkillsSections />
