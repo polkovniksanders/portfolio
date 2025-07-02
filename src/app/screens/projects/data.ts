@@ -13,7 +13,7 @@ export const data: ProjectDataProps[] = [
     description:
       'Мультипользовательский дашборд для медицинских учреждений. SaaS-платформа для управления медициским оборудованием',
     stack: ['React', 'Redux Toolkit', 'Less', 'PHP', 'Docker'],
-    link: null,
+    link: 'https://kitactive.ru',
   },
 
   {
@@ -21,7 +21,7 @@ export const data: ProjectDataProps[] = [
     title: 'Telegram bot dashboard',
     description: 'Мультипользовательский дашборд для управления Telegram-ботом',
     stack: ['React', 'Redux Toolkit', 'Styled Components', 'Apexcharts'],
-    link: null,
+    link: 'https://spodial.com',
   },
 
   {
@@ -36,9 +36,9 @@ export const data: ProjectDataProps[] = [
     id: 4,
     title: 'Market in Telegram',
     description:
-      'Заказная разработка полнофунционального магазина в Telegram с возможностью оплаты crypto',
+      'Заказная разработка полнофунционального магазина в Telegram с возможностью оплаты crypto. По ссылке представлен DEV-контур',
     stack: ['React', 'TypeScript', 'Redux Toolkit', 'Ant Design'],
-    link: null,
+    link: 'https://t.me/dev_mozhnostore_bot/dev_mozhno?startapp=1',
   },
   {
     id: 5,
@@ -61,6 +61,6 @@ export const data: ProjectDataProps[] = [
     description:
       'Генератор 5 разных цветов с возможностью заблокировать и перевыбрать другие.',
     stack: ['JS', 'CSS', 'VanillaJS'],
-    link: 'https://polkovniksanders.github.io/fancy-color-generator/',
+    link: 'https://polkovniksanders.github.io/fancy-color-generator',
   },
 ];

@@ -37,11 +37,12 @@ export default function ProjectsSection() {
                   'text-primary bg-primary/20',
                   'text-badge-primary bg-badge-primary/20',
                   'text-badge-secondary bg-badge-secondary/20',
+                  'text-white bg-white/20',
                 ];
                 return (
                   <span
                     key={tech}
-                    className={`px-3 py-1 rounded-full text-sm font-medium ${badgeColors[j % 3]}`}
+                    className={`px-3 py-1 rounded-full text-sm font-medium ${badgeColors[j % badgeColors.length]}`}
                   >
                     {tech}
                   </span>
@@ -50,7 +51,7 @@ export default function ProjectsSection() {
             </div>
 
             {project.link === null ? (
-              <Text>NDA</Text>
+              <Text>NDA / Presentation on Request</Text>
             ) : (
               <div>
                 <MainButton onClick={() => viewProject(project.link)}>
