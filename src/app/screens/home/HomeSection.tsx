@@ -14,7 +14,7 @@ export default function HomeSection() {
 
   return (
     <Section id={'home'}>
-      <div className='w-screen h-screen flex items-center justify-center bg-black text-white transition-colors'>
+      <div className='w-screen h-screen flex items-center justify-center transition-colors'>
         <div className='z-10 flex flex-col items-center text-center gap-6 px-4'>
           <span className='text-sm sm:text-base font-medium tracking-wide uppercase'>
             Привет, я Слава

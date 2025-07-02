@@ -10,7 +10,7 @@ export const data: DataProps[] = [
     id: 1,
     question: 'С какими технологиями вы работаете?',
     answer:
-      'React, Next.js, TypeScript, Redux Toolkit, Styled Components, Tailwind CSS, Node.js, PostgreSQL, Prisma, WebSockets.',
+      'React, Next.js, TypeScript, Redux Toolkit, Styled Components, Tailwind CSS, Node.js, PostgresSQL, Prisma, WebSockets. А также много всего другого',
   },
   {
     id: 2,
@@ -32,13 +32,13 @@ export const data: DataProps[] = [
   },
   {
     id: 5,
-    question: 'Ведёте ли вы pet-проекты или open source?',
+    question: 'Есть ли pet-проекты или open source?',
     answer:
       'Да, разрабатываю собственные проекты и изучаю на них новые для себя технологии. Люблю переносить изученное в коммерческие проекты, если это помогает улучшить продукт',
   },
   {
     id: 6,
-    question: 'Как с вами связаться или задать вопрос?',
-    answer: `Telegram: @${CONTACT}`,
+    question: 'Как связаться или задать вопрос?',
+    answer: `Telegram: @${CONTACT}, можно на "ты"`,
   },
 ];

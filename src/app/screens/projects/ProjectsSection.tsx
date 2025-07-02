@@ -6,6 +6,8 @@ import Text from '@/components/typography/Text';
 import { data } from '@/app/screens/projects/data';
 import MainButton from '@/components/buttons/MainButton';
 import { ExternalLink } from 'lucide-react';
+import BlockTitle from '@/components/typography/BlockTitle';
+import Card from '@/components/Card';
 
 export default function ProjectsSection() {
   const viewProject = (link: string | null) => {
@@ -20,12 +22,10 @@ export default function ProjectsSection() {
 
       <div className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-8'>
         {data.map(project => (
-          <div
-            key={project.id}
-            className='bg-neutral-900 rounded-2xl p-6 flex flex-col justify-between gap-4 hover:shadow-lg transition'
-          >
+          <Card key={project.id}>
             <div className={'flex flex-col gap-4'}>
-              <Text className={'text-2xl font-bold'}>{project.title}</Text>
+              <BlockTitle>{project.title}</BlockTitle>
+
               <div className='text-base text-gray-300'>
                 {project.description}
               </div>
@@ -34,9 +34,9 @@ export default function ProjectsSection() {
             <div className='flex flex-wrap gap-2'>
               {project.stack.map((tech, j) => {
                 const badgeColors = [
-                  'text-primary bg-primary/10',
-                  'text-pink-400 bg-pink-400/10',
-                  'text-amber-400 bg-amber-400/10',
+                  'text-primary bg-primary/20',
+                  'text-badge-primary bg-badge-primary/20',
+                  'text-badge-secondary bg-badge-secondary/20',
                 ];
                 return (
                   <span
@@ -58,7 +58,7 @@ export default function ProjectsSection() {
                 </MainButton>
               </div>
             )}
-          </div>
+          </Card>
         ))}
       </div>
     </Section>
