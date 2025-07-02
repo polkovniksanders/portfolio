@@ -1,57 +1,27 @@
-import SectionTitle from '@/components/SectionTitle';
+'use client';
+
+import SectionTitle from '@/components/typography/SectionTitle';
 import Section from '@/components/Section';
-import Text from '@/components/Text';
+import Text from '@/components/typography/Text';
+import { data } from '@/app/screens/projects/data';
+import MainButton from '@/components/buttons/MainButton';
+import { ExternalLink } from 'lucide-react';
 
 export default function ProjectsSection() {
-  const projects = [
-    {
-      title: 'Medical dashboard',
-      description:
-        'Мультипользовательский дашборд для медицинских учреждений. SaaS-платформа для управления медициским оборудованием',
-      stack: ['React', 'Redux Toolkit', 'Less', 'PHP', 'Docker'],
-    },
-
-    {
-      title: 'Telegram bot dashboard',
-      description:
-        'Мультипользовательский дашборд для управления Telegram-ботом',
-      stack: ['React', 'Redux Toolkit', 'Styled Components', 'Apexcharts'],
-    },
-
-    {
-      title: 'AI person generator',
-      description:
-        'Система генерирует краткое описание о человеке и его изображение  по ФИО, профессии и возрасту. Построена на AI',
-      stack: ['React', 'TypeScript', 'Node.js', 'Prisma', 'PostgreSQL', 'AI'],
-    },
-    {
-      title: 'Market in Telegram',
-      description:
-        'Заказная разработка полнофунционального магазина в Telegram с возможностью оплаты crypto',
-      stack: ['React', 'TypeScript', 'Redux Toolkit', 'Ant Design'],
-    },
-    {
-      title: 'Telegram Shops',
-      description:
-        'Мультифункциональное Telegram App, которое позволяет создать и настроить собственный магазин в Telegram. Настраивать и создавать можно как через AI, Веб-админку или через отдельное Telegram-приложение',
-      stack: ['React', 'TypeScript', 'Redux Toolkit', 'AI'],
-    },
-    {
-      title: 'Место вашего проекта',
-      description:
-        'Закажите собственное приложение. Предпочитаю писать качественный код, если не горят ваши сроки',
-      stack: ['Next.JS', 'TypeScript', 'Redux Toolkit', 'AI'],
-    },
-  ];
+  const viewProject = (link: string | null) => {
+    if (link) {
+      window.open(link, '_blank', 'noopener,noreferrer');
+    }
+  };
 
   return (
     <Section id={'projects'}>
       <SectionTitle>Проекты</SectionTitle>
 
       <div className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-8'>
-        {projects.map(project => (
+        {data.map(project => (
           <div
-            key={project.title}
+            key={project.id}
             className='bg-neutral-900 rounded-2xl p-6 flex flex-col justify-between gap-4 hover:shadow-lg transition'
           >
             <div className={'flex flex-col gap-4'}>
@@ -78,6 +48,16 @@ export default function ProjectsSection() {
                 );
               })}
             </div>
+
+            {project.link === null ? (
+              <Text>NDA</Text>
+            ) : (
+              <div>
+                <MainButton onClick={() => viewProject(project.link)}>
+                  <ExternalLink />
+                </MainButton>
+              </div>
+            )}
           </div>
         ))}
       </div>

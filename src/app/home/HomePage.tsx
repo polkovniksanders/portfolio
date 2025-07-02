@@ -30,7 +30,7 @@ export default function HomePage() {
   return (
     <>
       <Navbar />
-      <main className='w-screen overflow-y-scroll snap-y snap-mandatory'>
+      <main className='w-screen'>
         <HomeSection />
         <SkillsSections />
         <TechnologiesSection />

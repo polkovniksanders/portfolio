@@ -1,5 +1,5 @@
 import Section from '@/components/Section';
-import SectionTitle from '@/components/SectionTitle';
+import SectionTitle from '@/components/typography/SectionTitle';
 import { data } from '@/app/screens/faq/data';
 
 export default function FaqSection() {
@@ -8,8 +8,8 @@ export default function FaqSection() {
       <SectionTitle>Для HR</SectionTitle>
 
       <div className='max-w-2xl grid grid-cols-1  gap-6'>
-        {data.map((faq, i) => (
-          <div key={i} className='bg-neutral-900 rounded-2xl px-6 py-5'>
+        {data.map(faq => (
+          <div key={faq.id} className='bg-neutral-900 rounded-2xl px-6 py-5'>
             <div className='font-semibold text-lg mb-2 text-primary'>
               {faq.question}
             </div>

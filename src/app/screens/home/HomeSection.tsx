@@ -1,11 +1,15 @@
 'use client';
 
 import Section from '@/components/Section';
-import Text from '@/components/Text';
+import Text from '@/components/typography/Text';
+import MainButton from '@/components/buttons/MainButton';
+import useScrollToSection from '@/hooks/useScrollToSection';
+import { CONTACT } from '@/config/options';
 
 export default function HomeSection() {
+  const { handleScroll } = useScrollToSection();
   const contact = () => {
-    window.open('https://t.me/berghub', '_blank', 'noopener,noreferrer');
+    window.open(`https://t.me/${CONTACT}`, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -29,12 +33,10 @@ export default function HomeSection() {
 
           <p className='max-w-xl text-base sm:text-lg mt-4'></p>
           <div className='flex gap-4 mt-6 flex-wrap justify-center'>
-            <a
-              href='#projects'
-              className='px-6 py-3 rounded-full bg-primary text-white font-semibold shadow hover:bg-primary/90 transition'
-            >
+            <MainButton onClick={() => handleScroll('projects')}>
               Мои проекты
-            </a>
+            </MainButton>
+
             <a
               onClick={contact}
               className='px-6 py-3 rounded-full border border-primary text-primary font-semibold hover:bg-primary/10 transition'

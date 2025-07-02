@@ -1,19 +1,14 @@
 'use client';
 
 import { useActiveSection } from '@/hooks/useActiveSection';
+import useScrollToSection from '@/hooks/useScrollToSection';
 
 const sectionIds = ['home', 'skills', 'technologies', 'projects', 'hr'];
 
 export default function Navbar() {
   const active = useActiveSection(sectionIds);
 
-  // Функция для скролла к секции
-  const handleScroll = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  };
+  const { handleScroll } = useScrollToSection();
 
   return (
     <nav className='fixed top-0 w-full bg-black z-50'>

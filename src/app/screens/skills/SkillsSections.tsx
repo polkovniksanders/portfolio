@@ -1,15 +1,8 @@
-import SectionTitle from '@/components/SectionTitle';
-import Text from '@/components/Text';
+import SectionTitle from '@/components/typography/SectionTitle';
+import Text from '@/components/typography/Text';
+import { data } from '@/app/screens/skills/data';
 
 export default function SkillsSections() {
-  const stats = [
-    { label: 'Лет коммерческого опыта', value: 6 },
-    { label: 'Коммерческих проектов', value: 7 },
-    { label: 'Пет-проектов', value: 4 },
-    { label: 'Возраст', value: 36 },
-    { label: 'Собеседований проведено', value: '∞' },
-  ];
-
   return (
     <section
       id='skills'
@@ -18,7 +11,7 @@ export default function SkillsSections() {
       <SectionTitle>Кратко обо мне</SectionTitle>
 
       <div className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-8'>
-        {stats.map(({ label, value }) => (
+        {data.map(({ label, value }) => (
           <div key={label} className='flex flex-col items-center'>
             <span className='text-5xl font-extrabold text-primary mb-2'>
               {value}

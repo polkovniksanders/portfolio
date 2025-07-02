@@ -26,18 +26,20 @@ export const metadata: Metadata = {
     'Redux',
     'Tailwind CSS',
   ],
-  authors: [{ name: 'Попов Вячеслав', url: 'https://github.com/slavapopov' }],
+  authors: [
+    { name: 'Попов Вячеслав', url: 'https://github.com/polkovniksanders' },
+  ],
   creator: 'Попов Вячеслав',
   icons: {
-    icon: '/icon.png',
-    shortcut: '/icon.png',
-    apple: '/apple-touch-icon.png',
+    icon: '/og_icon.png',
+    shortcut: '/favicon.ico',
+    apple: '/og_icon.png',
   },
   openGraph: {
     title: 'Портфолио | Попов Вячеслав',
     description:
       'Портфолио frontend-разработчика Попова Вячеслава. Проекты, стек, опыт, контакты.',
-    url: 'https://your-domain.com',
+    url: 'https://slava.berghub.ru',
     siteName: 'Портфолио | Попов Вячеслав',
     images: [
       {
@@ -51,13 +53,13 @@ export const metadata: Metadata = {
     type: 'website',
   },
   manifest: '/site.webmanifest',
-  metadataBase: new URL('https://your-domain.com'),
+  metadataBase: new URL('https://slava.berghub.ru'),
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang='ru'>
-      <body className={`${getFont.variable}  antialiased`}>{children}</body>
+      <body className={`${getFont.variable} antialiased`}>{children}</body>
     </html>
   );
 }
