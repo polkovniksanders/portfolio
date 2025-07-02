@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Source_Code_Pro } from 'next/font/google';
 import './globals.css';
 import { PropsWithChildren } from 'react';
+import Providers from '@/app/Providers';
 
 const getFont = Source_Code_Pro({
   variable: '--font-sans',
@@ -58,8 +59,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang='ru'>
-      <body className={`${getFont.variable} antialiased`}>{children}</body>
+    <html lang='ru' suppressHydrationWarning>
+      <body className={`${getFont.variable} antialiased`}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

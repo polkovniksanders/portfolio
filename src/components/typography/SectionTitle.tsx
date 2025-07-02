@@ -11,7 +11,7 @@ export default function SectionTitle({
 }: SectionTitleProps) {
   return (
     <h2
-      className={`text-accent text-3xl sm:text-4xl md:text-5xl text-white font-bold mb-12 tracking-tight ${className}`}
+      className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-12 tracking-tight ${className}`}
     >
       {children}
     </h2>
