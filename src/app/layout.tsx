@@ -60,7 +60,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang='ru' suppressHydrationWarning>
-      <body className={`${getFont.variable} antialiased`}>
+      <body className={`${getFont.variable} antialiased scroll-smooth`}>
         <Providers>{children}</Providers>
       </body>
     </html>

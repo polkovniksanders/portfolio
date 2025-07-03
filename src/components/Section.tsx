@@ -11,7 +11,7 @@ export default function Section({ id, children, className }: SectionProps) {
     <section
       id={id}
       className={clsx(
-        'w-full flex flex-col items-center justify-center bg-black px-15 py-20',
+        'w-full flex flex-col items-center justify-center px-6 py-10 sm:px-6 sm:py-10 md:px-6 md:py-12 lg:px-12 lg:py-20',
         className,
       )}
     >
