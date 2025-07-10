@@ -35,8 +35,8 @@ export default function HomePage() {
       <main className='w-screen'>
         <HomeSection />
         <SkillsSections />
-        <TechnologiesSection />
         <ProjectsSection />
+        <TechnologiesSection />
         <FaqSection />
       </main>
     </>

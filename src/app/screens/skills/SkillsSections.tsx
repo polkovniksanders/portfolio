@@ -7,7 +7,7 @@ import Section from '@/components/Section';
 export default function SkillsSections() {
   return (
     <Section className={'h-screen'} id='skills'>
-      <SectionTitle>Кратко обо мне</SectionTitle>
+      <SectionTitle>Обо мне в цифрах</SectionTitle>
 
       <div className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-8'>
         {data.map(({ label, value }) => (

@@ -53,7 +53,7 @@ export const data: ProjectDataProps[] = [
     title: 'Dribble dashboard',
     description: 'Случайный dashboard. Учебный проект.',
     stack: ['Next.JS', 'TypeScript', 'Redux Toolkit', 'Tailwind'],
-    link: 'https://taskhub-two.vercel.app/dashboard',
+    link: 'https://taskhub-two.vercel.app',
   },
   {
     id: 7,
