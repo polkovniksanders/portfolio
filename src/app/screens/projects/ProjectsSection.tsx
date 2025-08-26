@@ -20,14 +20,27 @@ export default function ProjectsSection() {
     <Section id={'projects'}>
       <SectionTitle>Проекты</SectionTitle>
 
-      <div className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-8'>
+      <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8'>
         {data.map(project => (
           <Card key={project.id}>
             <div className={'flex flex-col gap-4'}>
               <BlockTitle>{project.title}</BlockTitle>
 
-              <div className='text-base text-gray-300'>
-                {project.description}
+              <div className={'flex flex-col gap-2 mt-4'}>
+                <h4 className={'font-bold uppercase'}>Проблематика</h4>
+                <div className='text-base text-gray-200'>{project.problem}</div>
+              </div>
+
+              <div className={'flex flex-col gap-2'}>
+                <h4 className={'font-bold uppercase'}>Решение</h4>
+                <div className='text-base text-gray-200'>{project.solve}</div>
+              </div>
+
+              <div className={'flex flex-col gap-2'}>
+                <h4 className={'font-bold uppercase'}>Результат</h4>
+                <div className='text-base font-bold text-gray-200'>
+                  {project.result}
+                </div>
               </div>
             </div>
 
@@ -53,10 +66,12 @@ export default function ProjectsSection() {
             {project.link === null ? (
               <Text>NDA / Presentation on Request</Text>
             ) : (
-              <div>
+              <div className={'flex flex-row gap-4 items-center'}>
                 <MainButton onClick={() => viewProject(project.link)}>
                   <ExternalLink />
                 </MainButton>
+
+                <p>Ссылка для просмотра (код или вживую)</p>
               </div>
             )}
           </Card>

@@ -21,7 +21,7 @@ export default function SkillsSections() {
         ))}
       </div>
       <Text className={'mt-6'}>
-        А еще... У меня есть любимая жена, котик и отличная семья
+        А еще... У меня есть любимая жена, котик и я увлекаюсь бегом
       </Text>
     </Section>
   );
