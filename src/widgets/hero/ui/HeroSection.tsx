@@ -15,14 +15,13 @@ export default function HeroSection() {
             Привет, я Слава
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold">
-            Фронтенд-разработчик <br />
+            Fullstack-разработчик <br />
             <span className="text-primary">React & TypeScript</span>
           </h1>
 
           <Text>
-            Разрабатываю современные интерфейсы, оптимизирую фронтенд под бизнес-задачи, создаю
-            удобный и быстрый пользовательский опыт. Специализация — React, Redux, Tailwind, Styled
-            Components, современный JavaScript.
+            Разрабатываю продукты от интерфейса до бэкенда: React, Next.js, Node.js, PostgreSQL.
+            Специализация — современный веб, Telegram Mini Apps и AI-интеграции.
           </Text>
 
           <div className="flex gap-4 mt-6 flex-wrap justify-center">

@@ -13,10 +13,10 @@ const getFont = Source_Code_Pro({
 
 export const metadata: Metadata = {
   title: 'Портфолио | Попов Вячеслав',
-  description: 'Портфолио frontend-разработчика Попова Вячеслава. Проекты, стек, опыт, контакты.',
+  description: 'Портфолио fullstack-разработчика Попова Вячеслава. Проекты, стек, опыт, контакты.',
   keywords: [
     'Попов Вячеслав',
-    'Frontend',
+    'Fullstack',
     'React',
     'Next.js',
     'Разработчик',
@@ -35,7 +35,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Портфолио | Попов Вячеслав',
-    description: 'Портфолио frontend-разработчика Попова Вячеслава. Проекты, стек, опыт, контакты.',
+    description:
+      'Портфолио fullstack-разработчика Попова Вячеслава. Проекты, стек, опыт, контакты.',
     url: 'https://slava.berghub.ru',
     siteName: 'Портфолио | Попов Вячеслав',
     images: [
