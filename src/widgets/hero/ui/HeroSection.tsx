@@ -14,7 +14,7 @@ export default function HeroSection() {
           <span className="text-sm sm:text-base font-medium tracking-wide uppercase">
             Привет, я Слава
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-snug">
             Fullstack-разработчик <br />
             <span className="text-primary">React & TypeScript</span>
           </h1>

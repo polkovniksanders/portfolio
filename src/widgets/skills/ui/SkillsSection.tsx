@@ -3,7 +3,7 @@ import { data } from '../model/data';
 
 export default function SkillsSection() {
   return (
-    <Section className="h-screen" id="skills">
+    <Section id="skills">
       <SectionTitle>Обо мне в цифрах</SectionTitle>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-8">

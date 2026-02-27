@@ -5,7 +5,6 @@ export interface NavItem {
 
 export const NAV_ITEMS: NavItem[] = [
   { id: 'home', label: 'Главная' },
-  { id: 'skills', label: 'Обо мне' },
   { id: 'projects', label: 'Проекты' },
   { id: 'technologies', label: 'Стек' },
   { id: 'hr', label: 'HR' },
