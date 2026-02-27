@@ -13,8 +13,7 @@ const getFont = Source_Code_Pro({
 
 export const metadata: Metadata = {
   title: 'Портфолио | Попов Вячеслав',
-  description:
-    'Портфолио frontend-разработчика Попова Вячеслава. Проекты, стек, опыт, контакты.',
+  description: 'Портфолио frontend-разработчика Попова Вячеслава. Проекты, стек, опыт, контакты.',
   keywords: [
     'Попов Вячеслав',
     'Frontend',
@@ -27,9 +26,7 @@ export const metadata: Metadata = {
     'Redux',
     'Tailwind CSS',
   ],
-  authors: [
-    { name: 'Попов Вячеслав', url: 'https://github.com/polkovniksanders' },
-  ],
+  authors: [{ name: 'Попов Вячеслав', url: 'https://github.com/polkovniksanders' }],
   creator: 'Попов Вячеслав',
   icons: {
     icon: '/og_icon.png',
@@ -38,8 +35,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Портфолио | Попов Вячеслав',
-    description:
-      'Портфолио frontend-разработчика Попова Вячеслава. Проекты, стек, опыт, контакты.',
+    description: 'Портфолио frontend-разработчика Попова Вячеслава. Проекты, стек, опыт, контакты.',
     url: 'https://slava.berghub.ru',
     siteName: 'Портфолио | Попов Вячеслав',
     images: [
@@ -59,7 +55,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang='ru' suppressHydrationWarning>
+    <html lang="ru" suppressHydrationWarning>
       <body className={`${getFont.variable} antialiased scroll-smooth`}>
         <Providers>{children}</Providers>
       </body>

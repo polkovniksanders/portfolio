@@ -3,5 +3,5 @@
 import { PropsWithChildren } from 'react';
 
 export default function Providers({ children }: PropsWithChildren) {
-  return <div>{children}</div>;
+  return <>{children}</>;
 }

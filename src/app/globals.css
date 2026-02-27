@@ -1,13 +1,13 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  --foreground: #FDECE4;
-  --foreground-secondary: #7E7470;
+  --foreground: #fdece4;
+  --foreground-secondary: #7e7470;
   --background: #070606;
-  --primary: #F89458;
+  --primary: #f89458;
   --background-secondary: #191818;
-  --badge-primary: #0DB6E9;
-  --badge-secondary:#FB64B6;
+  --badge-primary: #0db6e9;
+  --badge-secondary: #fb64b6;
 }
 
 @theme inline {
@@ -20,22 +20,14 @@
   --color-badge-secondary: var(--badge-secondary);
 }
 
-@layer base {
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
 html {
   font-size: 16px;
 }
 
-html, body {
-  font-family: var(--font-sans), sans-serif;
-}
-
-body {
-  background: var(--color-background);
-  color: var(--color-foreground);
-  min-width: 320px;
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    min-width: 320px;
+    font-family: var(--font-sans), sans-serif;
+  }
 }
