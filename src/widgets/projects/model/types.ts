@@ -1,5 +1,6 @@
 export interface Project {
   id: number;
+  position: number;
   title: string;
   problem: string;
   solve: string;

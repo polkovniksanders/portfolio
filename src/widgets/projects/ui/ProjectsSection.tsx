@@ -8,9 +8,11 @@ export default function ProjectsSection() {
       <SectionTitle>Проекты</SectionTitle>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {data.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
+        {[...data]
+          .sort((a, b) => a.position - b.position)
+          .map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
       </div>
     </Section>
   );

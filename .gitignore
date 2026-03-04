@@ -33,13 +33,9 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
-# vercel
-.vercel
-
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-.claude
 .idea
 /.idea/codeStyles/codeStyleConfig.xml
 /.idea/jsLinters/eslint.xml
@@ -50,3 +46,7 @@ next-env.d.ts
 /.idea/prettier.xml
 /.idea/codeStyles/Project.xml
 /.idea/inspectionProfiles/Project_Default.xml
+
+#AI
+.claude
+CLAUDE.md

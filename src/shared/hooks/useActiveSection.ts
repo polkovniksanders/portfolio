@@ -1,25 +1,34 @@
 import { useEffect, useState } from 'react';
 
-export function useActiveSection(ids: string[], threshold = 0.4) {
-  const [active, setActive] = useState(ids[0]);
+export function useActiveSection(ids: string[]) {
+  const [active, setActive] = useState(ids[0] ?? '');
 
   useEffect(() => {
-    const handler = (entries: IntersectionObserverEntry[]) => {
-      const visible = entries
-        .filter((e) => e.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-      if (visible[0]) setActive(visible[0].target.id);
+    const getActiveId = (): string => {
+      // If scrolled to the bottom of the page — last section is active
+      const atBottom =
+        window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
+      if (atBottom) return ids[ids.length - 1] ?? ids[0] ?? '';
+
+      const threshold = window.scrollY + window.innerHeight * 0.4;
+      let current = ids[0] ?? '';
+
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= threshold) {
+          current = id;
+        }
+      }
+
+      return current;
     };
 
-    const observer = new window.IntersectionObserver(handler, { threshold });
+    const handleScroll = () => setActive(getActiveId());
 
-    ids.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
-  }, [ids, threshold]);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [ids]);
 
   return active;
 }
