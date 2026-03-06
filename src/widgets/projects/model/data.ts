@@ -38,7 +38,7 @@ export const data: Project[] = [
     result:
       'Пользователи создают уникальный магазин за несколько минут без технических знаний. Проект объединяет современные веб-технологии и AI на одной платформе.',
     stack: ['React', 'TypeScript', 'Redux Toolkit', 'AI'],
-    link: null,
+    link: 'https://t.me/luding_store_bot',
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ export const data: Project[] = [
     result:
       'Инструмент для быстрого запуска кастомизированных ИИ-агентов без разработки. Демонстрирует работу с современным AI-стеком и создание удобных интерфейсов для сложных технологий.',
     stack: ['Next.js', 'Tailwind CSS', 'Telegram Mini App SDK', 'AI'],
-    link: 'https://t.me/ai_coach_spodial_bot/ai_coach_app',
+    link: null,
   },
   {
     id: 5,
@@ -64,7 +64,7 @@ export const data: Project[] = [
     result:
       'Запущен готовый к продажам магазин, открывший заказчику новый канал для работы с Web3-аудиторией. Проект демонстрирует создание коммерческих решений с нетривиальной платёжной экосистемой.',
     stack: ['React', 'TypeScript', 'Redux Toolkit', 'Ant Design'],
-    link: 'https://t.me/dev_mozhnostore_bot/dev_mozhno?startapp=1',
+    link: null,
   },
   {
     id: 6,
@@ -77,12 +77,12 @@ export const data: Project[] = [
     result:
       'Законченное full-stack решение, ускоряющее творческий процесс. Демонстрирует интеграцию LLM и image-генерации, работу с PostgreSQL через Prisma и деплой на Vercel.',
     stack: ['React', 'TypeScript', 'Node.js', 'Prisma', 'PostgreSQL', 'AI'],
-    link: 'https://az-opal.vercel.app',
+    link: 'https://generator.berghub.ru',
   },
   {
     id: 7,
     position: 300,
-    title: 'Dribbble Dashboard — Социальная платформа для дизайнеров',
+    title: 'Dribbble Dashboard — Платформа для дизайнеров',
     problem:
       'Задача: создать современную социальную платформу, повторяющую ключевые функции Dribbble (лента, лайки, комментарии, профили), с акцентом на скорость и удобство.',
     solve:

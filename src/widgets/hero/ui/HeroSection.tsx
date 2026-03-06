@@ -6,6 +6,19 @@ import useScrollToSection from '@/shared/hooks/useScrollToSection';
 import { TELEGRAM_URL } from '@/shared/config/contacts';
 
 const PHRASES = ['разработчик', 'Growth Engineer', 'React & TypeScript', 'Next.js & Node.js'];
+
+const STARS = [
+  { top: '12%', left: '7%', size: 2, delay: '0s', dur: '3.2s' },
+  { top: '22%', left: '91%', size: 1.5, delay: '1.2s', dur: '4s' },
+  { top: '55%', left: '94%', size: 2, delay: '2.1s', dur: '3.5s' },
+  { top: '78%', left: '88%', size: 1.5, delay: '0.7s', dur: '4.5s' },
+  { top: '88%', left: '12%', size: 2, delay: '1.8s', dur: '3.8s' },
+  { top: '68%', left: '4%', size: 1.5, delay: '3.1s', dur: '3s' },
+  { top: '8%', left: '55%', size: 1, delay: '0.4s', dur: '5s' },
+  { top: '45%', left: '1%', size: 2, delay: '2.5s', dur: '3.6s' },
+  { top: '35%', left: '97%', size: 1, delay: '1.5s', dur: '4.2s' },
+  { top: '92%', left: '60%', size: 1.5, delay: '0.9s', dur: '3.4s' },
+];
 const TYPING_SPEED = 75;
 const DELETING_SPEED = 40;
 const PAUSE_AFTER_TYPE = 2200;
@@ -87,7 +100,23 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Glow blob with parallax */}
+      {/* Twinkling stars */}
+      {STARS.map((s, i) => (
+        <span
+          key={i}
+          className="absolute rounded-full bg-white pointer-events-none animate-twinkle"
+          style={{
+            top: s.top,
+            left: s.left,
+            width: s.size,
+            height: s.size,
+            animationDelay: s.delay,
+            ['--tw-duration' as string]: s.dur,
+          }}
+        />
+      ))}
+
+      {/* Primary glow blob with parallax */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
         <div
           ref={blobRef}
@@ -95,8 +124,22 @@ export default function HeroSection() {
         />
       </div>
 
+      {/* Secondary cosmic blob (blue, bottom-right) */}
+      <div className="absolute bottom-0 right-0 w-[380px] h-[380px] rounded-full bg-badge-primary/6 blur-[120px] pointer-events-none animate-pulse-glow delay-300" />
+
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center gap-6 max-w-3xl">
+        {/* Open-to-work status */}
+        <div className="animate-fade-in flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-green-500/30 bg-green-500/8 text-green-400">
+          <div className="relative w-2 h-2 shrink-0">
+            <div className="absolute inset-0 rounded-full bg-green-400 animate-status-ping" />
+            <div className="relative w-2 h-2 rounded-full bg-green-400" />
+          </div>
+          <span className="text-xs font-semibold tracking-[0.18em] uppercase">
+            Открыт к работе и заказам
+          </span>
+        </div>
+
         <span className="animate-fade-in delay-100 text-xs sm:text-sm font-medium tracking-[0.25em] uppercase text-foreground-secondary border border-white/10 rounded-full px-4 py-1.5 bg-white/5">
           Привет, я Слава
         </span>

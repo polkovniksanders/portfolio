@@ -1,5 +1,6 @@
 import { Navbar } from '@/widgets/navbar';
 import { HeroSection } from '@/widgets/hero';
+import { AboutSection } from '@/widgets/about';
 import { ProjectsSection } from '@/widgets/projects';
 import { ExperienceSection } from '@/widgets/experience';
 import { TechnologiesSection } from '@/widgets/technologies';
@@ -15,6 +16,7 @@ export default function Page() {
       </header>
       <main className="w-full overflow-x-hidden pb-16 sm:pb-0">
         <HeroSection />
+        <AboutSection />
         <ProjectsSection />
         <ExperienceSection />
         <TechnologiesSection />

@@ -11,7 +11,9 @@ export default function ProjectsSection() {
         {[...data]
           .sort((a, b) => a.position - b.position)
           .map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <div key={project.id} className="has-[details[open]]:self-start">
+              <ProjectCard project={project} />
+            </div>
           ))}
       </div>
     </Section>
