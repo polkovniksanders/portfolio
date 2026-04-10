@@ -5,7 +5,7 @@
 
 **Статус:** PET  
 **Production:** https://slava.berghub.ru  
-**Хостинг:** VPS (Beget)
+**Хостинг:** VPS (play2go)
 
 ---
 
